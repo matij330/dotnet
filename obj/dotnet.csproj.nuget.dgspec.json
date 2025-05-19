@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\pierdoły\\studia\\WWW\\nauka\\dotnet\\dotnet.csproj": {}
+    "C:\\Users\\Użytkownik\\Desktop\\dotnet_nauka\\projekt\\dotnet\\dotnet.csproj": {}
   },
   "projects": {
-    "E:\\pierdoły\\studia\\WWW\\nauka\\dotnet\\dotnet.csproj": {
+    "C:\\Users\\Użytkownik\\Desktop\\dotnet_nauka\\projekt\\dotnet\\dotnet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\pierdoły\\studia\\WWW\\nauka\\dotnet\\dotnet.csproj",
+        "projectUniqueName": "C:\\Users\\Użytkownik\\Desktop\\dotnet_nauka\\projekt\\dotnet\\dotnet.csproj",
         "projectName": "dotnet",
-        "projectPath": "E:\\pierdoły\\studia\\WWW\\nauka\\dotnet\\dotnet.csproj",
-        "packagesPath": "C:\\Users\\mateuszj.SERWER-ROBELIT\\.nuget\\packages\\",
-        "outputPath": "E:\\pierdoły\\studia\\WWW\\nauka\\dotnet\\obj\\",
+        "projectPath": "C:\\Users\\Użytkownik\\Desktop\\dotnet_nauka\\projekt\\dotnet\\dotnet.csproj",
+        "packagesPath": "C:\\Users\\Użytkownik\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Użytkownik\\Desktop\\dotnet_nauka\\projekt\\dotnet\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mateuszj.SERWER-ROBELIT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Użytkownik\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
