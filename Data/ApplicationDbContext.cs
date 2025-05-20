@@ -5,8 +5,8 @@ namespace dotnet.Data;
 
 public class ApplicationDbContext : IdentityDbContext
 {
-    DbSet<Student>Students{get; set;}
-    DbSet<StudentOceny>Grades{get; set;}
+    public DbSet<Student>Students{get; set;}
+    public DbSet<StudentOceny>Grades{get; set;}
 
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)

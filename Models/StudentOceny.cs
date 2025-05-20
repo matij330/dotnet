@@ -10,6 +10,9 @@ namespace dotnet.Models
         [Key]
         public int Id { get; set; }
         [Required]
+        [Range(2,5)]
+
+        public int StudentId { get; set; }  // <-- TO DODAJ
         public int Grade { get; set; }
         [ForeignKey("StudentId")]
         public virtual Student Student { get; set; }
