@@ -285,3 +285,4 @@ C:\Users\Użytkownik\Desktop\dotnet_nauka\projekt\dotnet\obj\Debug\net8.0\refint
 C:\Users\Użytkownik\Desktop\dotnet_nauka\projekt\dotnet\obj\Debug\net8.0\dotnet.pdb
 C:\Users\Użytkownik\Desktop\dotnet_nauka\projekt\dotnet\obj\Debug\net8.0\dotnet.genruntimeconfig.cache
 C:\Users\Użytkownik\Desktop\dotnet_nauka\projekt\dotnet\obj\Debug\net8.0\ref\dotnet.dll
+E:\pierdoły\studia\WWW\nauka\dotnet\obj\Debug\net8.0\dotnet.sourcelink.json

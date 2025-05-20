@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Mateusz\\source\\repos\\ERP_app\\dotnet\\dotnet.csproj": {}
+    "E:\\pierdoły\\studia\\WWW\\nauka\\dotnet\\dotnet.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Mateusz\\source\\repos\\ERP_app\\dotnet\\dotnet.csproj": {
+    "E:\\pierdoły\\studia\\WWW\\nauka\\dotnet\\dotnet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Mateusz\\source\\repos\\ERP_app\\dotnet\\dotnet.csproj",
+        "projectUniqueName": "E:\\pierdoły\\studia\\WWW\\nauka\\dotnet\\dotnet.csproj",
         "projectName": "dotnet",
-        "projectPath": "c:\\Users\\Mateusz\\source\\repos\\ERP_app\\dotnet\\dotnet.csproj",
-        "packagesPath": "C:\\Users\\Mateusz\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Mateusz\\source\\repos\\ERP_app\\dotnet\\obj\\",
+        "projectPath": "E:\\pierdoły\\studia\\WWW\\nauka\\dotnet\\dotnet.csproj",
+        "packagesPath": "C:\\Users\\mateuszj.SERWER-ROBELIT\\.nuget\\packages\\",
+        "outputPath": "E:\\pierdoły\\studia\\WWW\\nauka\\dotnet\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mateusz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mateuszj.SERWER-ROBELIT\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
