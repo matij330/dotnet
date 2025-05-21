@@ -22,7 +22,7 @@ namespace dotnet.Controllers
         // GET: Student
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Students.ToListAsync());
+            return View(await _context.Student.ToListAsync());
         }
 
         // GET: Student/Details/5
@@ -33,8 +33,8 @@ namespace dotnet.Controllers
                 return NotFound();
             }
 
-            var student = await _context.Students
-                .FirstOrDefaultAsync(m => m.StudentId == id);
+            var student = await _context.Student
+                .FirstOrDefaultAsync(m => m.StudentID == id);
             if (student == null)
             {
                 return NotFound();
@@ -46,7 +46,6 @@ namespace dotnet.Controllers
         // GET: Student/Create
         public IActionResult Create()
         {
-            ViewBag.StudentId = new SelectList(_context.Students, "StudentId", "Index");
             return View();
         }
 
@@ -55,7 +54,7 @@ namespace dotnet.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("StudentId,FirstName,SecondName,LastName,Index")] Student student)
+        public async Task<IActionResult> Create([Bind("StudentID,Name,Surname")] Student student)
         {
             if (ModelState.IsValid)
             {
@@ -74,7 +73,7 @@ namespace dotnet.Controllers
                 return NotFound();
             }
 
-            var student = await _context.Students.FindAsync(id);
+            var student = await _context.Student.FindAsync(id);
             if (student == null)
             {
                 return NotFound();
@@ -87,9 +86,9 @@ namespace dotnet.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("StudentId,FirstName,SecondName,LastName,Index")] Student student)
+        public async Task<IActionResult> Edit(int id, [Bind("StudentID,Name,Surname")] Student student)
         {
-            if (id != student.StudentId)
+            if (id != student.StudentID)
             {
                 return NotFound();
             }
@@ -103,7 +102,7 @@ namespace dotnet.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!StudentExists(student.StudentId))
+                    if (!StudentExists(student.StudentID))
                     {
                         return NotFound();
                     }
@@ -125,8 +124,8 @@ namespace dotnet.Controllers
                 return NotFound();
             }
 
-            var student = await _context.Students
-                .FirstOrDefaultAsync(m => m.StudentId == id);
+            var student = await _context.Student
+                .FirstOrDefaultAsync(m => m.StudentID == id);
             if (student == null)
             {
                 return NotFound();
@@ -140,10 +139,10 @@ namespace dotnet.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var student = await _context.Students.FindAsync(id);
+            var student = await _context.Student.FindAsync(id);
             if (student != null)
             {
-                _context.Students.Remove(student);
+                _context.Student.Remove(student);
             }
 
             await _context.SaveChangesAsync();
@@ -152,7 +151,7 @@ namespace dotnet.Controllers
 
         private bool StudentExists(int id)
         {
-            return _context.Students.Any(e => e.StudentId == id);
+            return _context.Student.Any(e => e.StudentID == id);
         }
     }
 }

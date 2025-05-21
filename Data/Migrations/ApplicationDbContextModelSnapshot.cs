@@ -15,7 +15,7 @@ namespace dotnet.Data.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "9.0.5");
+            modelBuilder.HasAnnotation("ProductVersion", "8.0.16");
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
@@ -215,47 +215,40 @@ namespace dotnet.Data.Migrations
 
             modelBuilder.Entity("dotnet.Models.Student", b =>
                 {
-                    b.Property<int>("StudentId")
+                    b.Property<int>("StudentID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("FirstName")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Index")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("LastName")
+                    b.Property<string>("Surname")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("SecondName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.HasKey("StudentID");
 
-                    b.HasKey("StudentId");
-
-                    b.ToTable("Students");
+                    b.ToTable("Student");
                 });
 
-            modelBuilder.Entity("dotnet.Models.StudentOceny", b =>
+            modelBuilder.Entity("dotnet.Models.StudentGrades", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("GradeID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("Grade")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("StudentId")
+                    b.Property<int>("StudentID")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("Id");
+                    b.HasKey("GradeID");
 
-                    b.HasIndex("StudentId");
+                    b.HasIndex("StudentID");
 
-                    b.ToTable("Grades");
+                    b.ToTable("StudentGrades");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -309,15 +302,20 @@ namespace dotnet.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("dotnet.Models.StudentOceny", b =>
+            modelBuilder.Entity("dotnet.Models.StudentGrades", b =>
                 {
                     b.HasOne("dotnet.Models.Student", "Student")
-                        .WithMany()
-                        .HasForeignKey("StudentId")
+                        .WithMany("Grades")
+                        .HasForeignKey("StudentID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Student");
+                });
+
+            modelBuilder.Entity("dotnet.Models.Student", b =>
+                {
+                    b.Navigation("Grades");
                 });
 #pragma warning restore 612, 618
         }

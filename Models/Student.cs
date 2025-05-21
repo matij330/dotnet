@@ -1,19 +1,17 @@
-using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+
 namespace dotnet.Models
 {
     public class Student
     {
         [Key]
-        public int StudentId { get; set; }
-        [Required]
-        public string FirstName { get; set; }
-        public string SecondName { get; set; }
-        [Required]
-        public string LastName { get; set; }
-        [Required]
-        public int Index { get; set; }
+        public int StudentID { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
 
+        // Poprawiona nazwa typu
+        public virtual List<StudentGrades> Grades { get; set; } = new List<StudentGrades>();
     }
+
 }
