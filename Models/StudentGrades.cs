@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 namespace dotnet.Models
 {
 public class StudentGrades
@@ -10,10 +11,10 @@ public class StudentGrades
         [Required]
         public int Grade { get; set; }
 
-        [Required]
         public int StudentID { get; set; }
 
         [ForeignKey("StudentID")]
+        [ValidateNever]
         public virtual Student Student { get; set; }
     }
 
