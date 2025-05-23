@@ -21,8 +21,12 @@ namespace dotnet.Controllers
 
         // GET: Student
         public async Task<IActionResult> Index()
+
         {
-            return View(await _context.Student.ToListAsync());
+            var Students = await _context.Student
+            .Include(s => s.Grades)
+            .ToListAsync();
+            return View(Students);
         }
 
         // GET: Student/Details/5
@@ -34,6 +38,7 @@ namespace dotnet.Controllers
             }
 
             var student = await _context.Student
+                .Include(s => s.Grades)
                 .FirstOrDefaultAsync(m => m.StudentID == id);
             if (student == null)
             {

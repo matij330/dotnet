@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PBlwkq0Mh1o=",
+  "dgSpecHash": "0FaD3+TAsEQ=",
   "success": true,
-  "projectFilePath": "E:\\pierdoły\\studia\\WWW\\nauka\\dotnet\\dotnet.csproj",
+  "projectFilePath": "E:\\pierdoły\\studia\\WWW\\dotnet\\dotnet.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mateuszj.SERWER-ROBELIT\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\mateuszj.SERWER-ROBELIT\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
